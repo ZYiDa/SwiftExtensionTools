@@ -18,8 +18,8 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios, "11.0"
   spec.swift_versions   = "5.0"
   spec.source           = { :git => "https://github.com/ZYiDa/SwiftExtensionTools.git", :tag => "#{spec.version}" }
-  spec.source_files     = "SwiftExtensionTools/SwiftExtensionTools/SwiftExtensionTools/*.{swift}"
-  spec.resources        = "SwiftExtensionTools/SwiftExtensionTools/SwiftExtensionTools/*.xcassets"
+  spec.source_files     = "SwiftExtensionTools/SwiftExtensionTools/SwiftExtensionTools/*.swift"
+  # spec.resources        = "SwiftExtensionTools/SwiftExtensionTools/SwiftExtensionTools/*.xcassets"
   spec.framework        = "UIKit"
   spec.requires_arc     = true
 end
