@@ -1,0 +1,24 @@
+PODS:
+  - EmptyDataSet-Swift (5.0.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.2)
+
+DEPENDENCIES:
+  - EmptyDataSet-Swift
+  - MBProgressHUD
+  - MJRefresh
+
+SPEC REPOS:
+  trunk:
+    - EmptyDataSet-Swift
+    - MBProgressHUD
+    - MJRefresh
+
+SPEC CHECKSUMS:
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+
+PODFILE CHECKSUM: 4fecd690bc773aded4ac9bcfae6049097ad2da26
+
+COCOAPODS: 1.10.1

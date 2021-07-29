@@ -1,0 +1,8 @@
+use_frameworks!
+inhibit_all_warnings!
+platform:ios,'11.0' 
+target "SwiftExtensionTools" do
+    pod 'MJRefresh'
+    pod 'MBProgressHUD'
+    pod 'EmptyDataSet-Swift'
+end

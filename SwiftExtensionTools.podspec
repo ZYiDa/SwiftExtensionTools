@@ -21,5 +21,8 @@ Pod::Spec.new do |spec|
   spec.source_files     = "SwiftExtensionTools/*.swift"
   # spec.resources        = "SwiftExtensionTools/SwiftExtensionTools/SwiftExtensionTools/*.xcassets"
   spec.framework        = "UIKit"
+  spec.dependency       = 'MJRefresh'
+  spec.dependency       = 'MBProgressHUD'
+  spec.dependency       = 'EmptyDataSet-Swift'
   spec.requires_arc     = true
 end
