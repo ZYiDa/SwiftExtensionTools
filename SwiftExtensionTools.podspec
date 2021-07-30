@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name             = "SwiftExtensionTools"
-  spec.version          = "1.0.1"
+  spec.version          = "1.0.2"
   spec.summary          = "Swift常用小工具"
   spec.description      = "Swift常用小工具,方便开发"
   spec.homepage         = "https://www.jianshu.com/u/cd395981b31d"
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.author           = { "ZYiDa" => "468466882@qq.com" }
   spec.platform         = :ios, "11.0"
   spec.swift_versions   = "5.0"
-  spec.source           = { :git => "https://github.com/ZYiDa/SwiftExtensionTools.git", :tag => "1.0.1" }
+  spec.source           = { :git => "https://github.com/ZYiDa/SwiftExtensionTools.git", :tag => "1.0.2" }
   spec.source_files     = "SwiftExtensionTools/*.swift"
   spec.resources        = "SwiftExtensionTools/*.xcassets"
   spec.framework        = "UIKit"
