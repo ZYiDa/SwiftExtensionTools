@@ -14,7 +14,7 @@ fileprivate let privateKeychainIdentifier = "\(String.BundleIdentifier ?? "").pr
 fileprivate let publicKeychainTag = publicKeychainIdentifier.data(using: .utf8)
 fileprivate let privateKeychainTag = privateKeychainIdentifier.data(using: .utf8)
 
-class KeyChainHelper: NSObject {
+public class KeyChainHelper: NSObject {
     
     ///查询
     private static func getKeyChainQuery(service serviceString:String!) -> [String:Any]{

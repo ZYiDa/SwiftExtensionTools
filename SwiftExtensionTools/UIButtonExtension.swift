@@ -16,7 +16,7 @@ import UIKit
 
 public typealias ButtonActionBlock = (_ btn:UIButton)->Void
 
-extension UIButton{
+public extension UIButton{
     
     private struct ObjcKey{
         static var ActionKey = "ActionKey"
@@ -27,7 +27,7 @@ extension UIButton{
     }
     
     //MARK: ********** Button添加Block回调 **********
-    public func add(action ac:ButtonActionBlock!,controlEvent ce:UIControl.Event){
+    func add(action ac:ButtonActionBlock!,controlEvent ce:UIControl.Event){
         
         weak var WeakSelf = self;
         objc_setAssociatedObject(WeakSelf as Any, &ObjcKey.ActionKey, ac, .OBJC_ASSOCIATION_COPY_NONATOMIC)
@@ -43,7 +43,7 @@ extension UIButton{
     }
     
     //MARK: 增大点击区域
-    public func enlarge(edge:CGFloat){
+    func enlarge(edge:CGFloat){
         objc_setAssociatedObject(self, &ObjcKey.TopKey, edge, .OBJC_ASSOCIATION_ASSIGN)
         objc_setAssociatedObject(self, &ObjcKey.LeftKey, edge, .OBJC_ASSOCIATION_ASSIGN)
         objc_setAssociatedObject(self, &ObjcKey.BottomKey, edge, .OBJC_ASSOCIATION_ASSIGN)
@@ -51,7 +51,7 @@ extension UIButton{
     }
     
     //MARK: 增大指定方向的点击区域
-    public func enlarge(top:CGFloat,left:CGFloat,bottom:CGFloat,right:CGFloat){
+    func enlarge(top:CGFloat,left:CGFloat,bottom:CGFloat,right:CGFloat){
         objc_setAssociatedObject(self, &ObjcKey.TopKey, top, .OBJC_ASSOCIATION_ASSIGN)
         objc_setAssociatedObject(self, &ObjcKey.LeftKey, left, .OBJC_ASSOCIATION_ASSIGN)
         objc_setAssociatedObject(self, &ObjcKey.BottomKey, bottom, .OBJC_ASSOCIATION_ASSIGN)
@@ -70,7 +70,7 @@ extension UIButton{
                       height: self.bounds.size.height + top + bottom)
     }
     
-    open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let rect = self.enlargeRect()
         if rect.equalTo(self.bounds) {
             return super.point(inside: point, with: event)

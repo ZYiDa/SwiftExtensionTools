@@ -14,7 +14,7 @@ import Foundation
 import AudioToolbox
 
 //MARK: - ** 针对于UIView动画的extension **
-extension UIView{
+public extension UIView{
     
     fileprivate struct ObjCKey{
         static var AnimationColorKey:String = "AnimationColorKey"
@@ -22,14 +22,14 @@ extension UIView{
         static var AnimatedIconKey:String = "AnimatedIconKey"
     }
     
-    #warning("动画颜色  ==>   一定要在动画类型和icon属性之前设置动画填充颜色")
-    public var animationColor:UIColor{
+    //MARK: - "动画颜色  ==>   一定要在动画类型和icon属性之前设置动画填充颜色"
+    var animationColor:UIColor{
         get{ objc_getAssociatedObject(self, &ObjCKey.AnimationColorKey) as? UIColor ?? UIColor.white }
         set{ objc_setAssociatedObject(self, &ObjCKey.AnimationColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)}
     }
     
     ///** UIView动画类型 **
-    public enum UIViewAnimationType{
+    enum UIViewAnimationType{
         case None
         /// 系统菊花
         case SystemActivityIndicator
@@ -56,7 +56,7 @@ extension UIView{
     }
     
     //MARK: - UIView动画Icon
-    public enum UIViewAnimatedIcon{
+    enum UIViewAnimatedIcon{
         case None
         /// 成功
         case Success
@@ -67,7 +67,7 @@ extension UIView{
     }
     
     //MARK: - 动画类型属性
-    public var animatonType:UIViewAnimationType{
+    var animatonType:UIViewAnimationType{
         get{ objc_getAssociatedObject(self, &ObjCKey.AnimationTypeKey) as? UIViewAnimationType ?? UIViewAnimationType.None }
         set{
             self.layer.removeAllAnimations()
@@ -90,7 +90,7 @@ extension UIView{
     }
     
     //MARK: - 动画Icon属性
-    public var animatedIcon:UIViewAnimatedIcon{
+    var animatedIcon:UIViewAnimatedIcon{
         get{ objc_getAssociatedObject(self, &ObjCKey.AnimatedIconKey) as? UIViewAnimatedIcon ?? UIViewAnimatedIcon.Success }
         set{
             self.layer.removeAllAnimations()

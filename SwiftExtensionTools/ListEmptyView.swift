@@ -133,13 +133,13 @@ extension ListEmptyView:EmptyDataSetDelegate,EmptyDataSetSource{
     
 }
 
-extension UIScrollView{
+public extension UIScrollView{
     
     private struct ObjcKey{
         static var listEmptyKey:Void?
     }
     
-    public var listEmptyView:ListEmptyView?{
+    var listEmptyView:ListEmptyView?{
         get{ objc_getAssociatedObject(self, &ObjcKey.listEmptyKey) as? ListEmptyView }
         set{
             self.emptyDataSetSource = newValue

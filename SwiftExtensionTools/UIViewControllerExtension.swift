@@ -78,9 +78,9 @@ public extension UIViewController{
 
 
 //MARK: - BaseNavigationController
-class BaseNavigationController: UINavigationController,UINavigationControllerDelegate {
+public class BaseNavigationController: UINavigationController,UINavigationControllerDelegate {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         weak var weakSelf = self
@@ -88,7 +88,7 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         
     }
     
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
         //MARK: - 导航栏是否隐藏
         self.setNavigationBarHidden(viewController.hideNavigationBar, animated: true)

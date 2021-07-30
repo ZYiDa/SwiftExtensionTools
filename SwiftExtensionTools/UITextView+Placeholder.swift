@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PlaceHolderTextView :  UITextView{
+public final class PlaceHolderTextView :  UITextView{
     fileprivate lazy var placeHolderLabel: UILabel = {
         $0.font = UIFont(name: "PingFangSC-Regular", size: 14)
         $0.textColor = UIColor(hexString: "#575757", alpha: 0.5)
@@ -24,7 +24,7 @@ final class PlaceHolderTextView :  UITextView{
         }
     }
     
-    override var font: UIFont? {
+    public override var font: UIFont? {
         didSet {
             if let f = font {
                 // 让在属性哪里修改的字体,赋给给我们占位label
@@ -34,7 +34,7 @@ final class PlaceHolderTextView :  UITextView{
     }
     
     // 重写text
-    override var text: String? {
+    public override var text: String? {
         didSet {
             // 根据文本是否有内容而显示占位label
             placeHolderLabel.isHidden = hasText
@@ -77,7 +77,7 @@ final class PlaceHolderTextView :  UITextView{
     }
     
     // 子控件布局
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         // 设置占位文字的坐标
         placeHolderLabel.frame.origin.x = 0

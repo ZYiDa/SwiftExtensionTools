@@ -8,7 +8,7 @@
 import UIKit
 import CommonCrypto
 
-extension String{
+public extension String{
     //MARK: - 简化使用的正则表达式
     static func ~=(lhs:String, rhs: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: rhs) else { return false }
@@ -26,7 +26,7 @@ extension String{
     }
 }
 
-extension String{
+public extension String{
     //MARK: - 是否为邮箱
     var isEmail:Bool{
         let parrern = "\\w[-\\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\\.)+[A-Za-z]{2,14}"

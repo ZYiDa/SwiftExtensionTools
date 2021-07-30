@@ -20,6 +20,9 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/ZYiDa/SwiftExtensionTools.git", :tag => "1.0.1" }
   spec.source_files     = "SwiftExtensionTools/*.swift"
   spec.resources        = "SwiftExtensionTools/*.xcassets"
-  spec.framework        = "UIKit",'MJRefresh','MBProgressHUD','EmptyDataSet-Swift'
+  spec.framework        = "UIKit"
+  spec.dependency 'MJRefresh'
+  spec.dependency 'MBProgressHUD'
+  spec.dependency 'EmptyDataSet-Swift'
   spec.requires_arc     = true
 end

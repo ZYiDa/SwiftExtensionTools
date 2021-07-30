@@ -13,13 +13,13 @@ import UIKit
 
 public typealias GestrueBlock = (_ gestrueRecognizer:Any?)->Void
 
-extension UIGestureRecognizer{
+public extension UIGestureRecognizer{
     
     private struct ObjcKey{
         public static var targetKey:Int = 19922020
     }
     
-    public static func recognizer(action gestrueBlock:GestrueBlock!) -> UIGestureRecognizer{
+    static func recognizer(action gestrueBlock:GestrueBlock!) -> UIGestureRecognizer{
         let t:UIGestureRecognizer = self.init()
         t.addAction(with: gestrueBlock)
         weak var t2 = t
